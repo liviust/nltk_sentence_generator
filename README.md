@@ -1,2 +1,3 @@
-# nltk_sentence_generator
-NLTK  sentence generator
+# NLTK Sentence Generator
+
+Builds grammar from source text and then generates all possible sentences from that grammar
