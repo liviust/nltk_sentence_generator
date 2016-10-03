@@ -33,7 +33,7 @@ S = Nonterminal('S')
 grammar = induce_pcfg(S, productions)
 
 
-with open("C:/Projects/playground/bobot/bobot/sents.doc", "w") as f:
+with open("../sents.doc", "w") as f:
     for sentence in generate(grammar, depth=5):
         print " ".join(sentence) + "\n"
         if max([sentence.count(x) for x in sentence]) <= 3:
