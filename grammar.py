@@ -1,7 +1,6 @@
 from stat_parser import Parser
-from nltk.parse.generate import generate, _generate_all
+from nltk.parse.generate import generate
 from nltk import Nonterminal, induce_pcfg
-from random import choice
 from nltk.tokenize import PunktSentenceTokenizer
 from contractions import contractions
 
