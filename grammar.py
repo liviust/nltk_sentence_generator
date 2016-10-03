@@ -21,21 +21,15 @@ for paragraph in text.split('\n'):
 parser = Parser()
 
 productions = []
-for sent in sents[:10]:
+for sent in sents[:25]:
     try:
         tree = parser.parse(sent)
         productions += tree.productions()
     except:
         pass
 
-
 S = Nonterminal('S')
 grammar = induce_pcfg(S, productions)
 
-
-with open("../sents.doc", "w") as f:
-    for sentence in generate(grammar, depth=5):
-        print " ".join(sentence) + "\n"
-        if max([sentence.count(x) for x in sentence]) <= 3:
-            f.write(" ".join(sentence) + ".\n")
-            print " ".join(sentence) + "\n"
+for sentence in generate(grammar, depth=5):
+    print " ".join(sentence) + "\n"
